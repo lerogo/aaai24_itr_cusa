@@ -1,0 +1,116 @@
+# ------------------data path------------------
+# Save path.
+save_path: "output/vitb32/coco/cusa"
+
+# ------------------dataset setting------------------
+# Dataset name. You shouldn't have to change it.
+dataset_name: "cross_coco"
+# Path of the dataset. coco / flickr dataset path.
+data_path: ""
+# train batch size.
+batch_size_train: 128
+# *val* batch size.
+batch_size_test: 128
+# test batch size.
+batch_size_testall: 128
+
+# ------------------model setting------------------
+# Path or name of clip pretrained model.
+# ['RN50', 'RN101', 'RN50x4', 'RN50x16', 'RN50x64', 'ViT-B/32', 'ViT-B/16', 'ViT-L/14', 'ViT-L/14@336px']
+clip_model: "ViT-B/32"
+
+# ------------------training setting------------------
+# is all gather
+is_all_gather: False
+
+# loss config
+loss_config: {
+
+  contrastive: {
+    is_on: True,
+    is_block_tau: False,
+    tau: 0.05,
+    tau_min: 0.01,
+    tau_max: 0.10,
+    rate: 1.00,
+    # mean or sum
+    contrastive_loss_mode: "mean",
+  },
+  
+  cross_softlabel: {
+    is_on: True,
+    
+    # logits tau
+    use_same_tau: True,
+    is_block_tau: False,
+    image_tau: 0.45,
+    image_tau_min: 0.10,
+    image_tau_max: 0.99,
+    text_tau: 0.45,
+    text_tau_min: 0.10,
+    text_tau_max: 0.99,
+
+    # loss
+    rate: 0.10,
+    # kl or contrastive
+    use_loss: "kl",
+    contrastive_loss_mode: "mean",
+    # add dot each
+    cross_softlabel_mode: "each",
+
+    # softlabel tau
+    use_same_softlabel_tau: True,
+    is_block_softlabel_tau: True,
+    the_softlabel_image_tau: 1.00,
+    the_softlabel_image_tau_min: 0.10,
+    the_softlabel_image_tau_max: 1.00,
+    the_softlabel_text_tau: 1.00,
+    the_softlabel_text_tau_min: 0.10,
+    the_softlabel_text_tau_max: 1.00,
+  },
+
+  uni_softlabel: {
+    is_on: True,
+
+    # logits tau
+    use_cross_softlabel_same_tau: False,
+    use_same_tau: False,
+    is_block_tau: False,
+    image_tau: 0.45,
+    image_tau_min: 0.10,
+    image_tau_max: 1.00,
+    text_tau: 0.45,
+    text_tau_min: 0.10,
+    text_tau_max: 1.00,
+
+    # loss
+    rate: 0.50,
+    use_loss: "kl",
+    contrastive_loss_mode: "mean",
+
+    # softlabel tau
+    use_cross_softlabel_same_softlabel_tau: True,
+    use_same_softlabel_tau: False,
+    is_block_softlabel_tau: True,
+    the_softlabel_image_tau: 1.00,
+    the_softlabel_image_tau_min: 0.10,
+    the_softlabel_image_tau_max: 1.00,
+    the_softlabel_text_tau: 1.00,
+    the_softlabel_text_tau_min: 0.10,
+    the_softlabel_text_tau_max: 1.00,
+  },
+}
+
+
+# ------------------training setting------------------
+optimizer: { opt: adamW, lr: 0.00001, weight_decay: 0.0001 }
+schedular:
+  {
+    sched: cosine,
+    epochs: 30,
+    min_lr: 0.000001,
+    decay_rate: 1,
+    warmup_lr: 0.00001,
+    warmup_epochs: 0,
+    cooldown_epochs: 0,
+  }
