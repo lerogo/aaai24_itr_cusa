@@ -150,11 +150,11 @@ python evaluation_sts.py
 ```
 
 ## Q&A
-note: The submitted code is code that has been refactored, so in some cases it may contain some bugs that we didn't catch, but that doesn't affect the results in our paper.
+NOTE: The submitted code is code that has been refactored, so in some cases it may contain some bugs that we didn't catch, but that doesn't affect the results in our paper.
 
 If you have any questions, please submit an [issue](https://github.com/lerogo/aaai24_itr_cusa/issues/new) or contact lerogohl\<AT\>gmail.com or huanghl\<AT\>buaa.edu.cn.
 
-*Some common questions will be shown here, if any.*
+> 1. Datasets, Checkpoints, and Logs can be found at this link: [google drive](https://drive.google.com/drive/folders/19vCLPr9uoR-_HNQ9ViZXVJz6S0fbxaFf)
 
 
 # Citation
