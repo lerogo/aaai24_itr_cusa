@@ -154,11 +154,7 @@ NOTE: The submitted code is code that has been refactored, so in some cases it m
 
 If you have any questions, please submit an [issue](https://github.com/lerogo/aaai24_itr_cusa/issues/new) or contact lerogohl\<AT\>gmail.com or huanghl\<AT\>buaa.edu.cn.
 
-<<<<<<< HEAD
 > 1. Datasets, Checkpoints(re-run), and Logs(re-run) can be found at this link: [google drive](https://drive.google.com/drive/folders/19vCLPr9uoR-_HNQ9ViZXVJz6S0fbxaFf)
-=======
-> 1. Datasets, Checkpoints, and Logs can be found at this link: [google drive](https://drive.google.com/drive/folders/19vCLPr9uoR-_HNQ9ViZXVJz6S0fbxaFf)
->>>>>>> 27a10b6ee3d078fe86835a11b6fac1df5d2fac9c
 
 
 # Citation
