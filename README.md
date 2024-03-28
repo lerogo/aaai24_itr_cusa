@@ -1,6 +1,6 @@
 # Cross-Modal and Uni-Modal Soft-Label Alignment for Image-Text Retrieval
 This is the source code of our AAAI 2024 paper "Cross-Modal and Uni-Modal Soft-Label Alignment for Image-Text Retrieval"
-[ [Paper](https://arxiv.org/abs/2403.05261) | [Appendix](_doc/Appendix_CUSA.pdf) ]
+[ [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/29789) | [Appendix](_doc/Appendix_CUSA.pdf) ]
 
 ## Quick Links
 
