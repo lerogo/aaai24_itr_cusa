@@ -166,6 +166,9 @@ If you find this method or code useful, please cite
   title={Cross-Modal and Uni-Modal Soft-Label Alignment for Image-Text Retrieval},
   author={Huang, Hailang and Nie, Zhijie and Wang, Ziqiao and Shang, Ziyu},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2024},
+  volume={38},
+  number={16},
+  pages={18298--18306},
+  year={2024}
 }
 ```
